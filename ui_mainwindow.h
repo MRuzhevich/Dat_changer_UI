@@ -26,6 +26,7 @@ public:
     QWidget *centralwidget;
     QLabel *label;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -38,15 +39,18 @@ public:
         centralwidget->setObjectName("centralwidget");
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(70, 60, 211, 91));
+        label->setGeometry(QRect(40, 30, 211, 91));
         QFont font;
         font.setFamilies({QString::fromUtf8("Perpetua")});
         font.setPointSize(20);
         label->setFont(font);
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(330, 210, 201, 121));
+        pushButton->setGeometry(QRect(270, 110, 201, 121));
         pushButton->setFont(font);
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(60, 280, 431, 241));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -66,6 +70,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Original dat files</p></body></html>", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Convert", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Open Dat file", nullptr));
     } // retranslateUi
 
 };
